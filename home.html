@@ -1,0 +1,22 @@
+<!doctype html>
+
+		{% block body %}
+		<div>
+			<form action="/" method="POST">
+			<input type="text" name="word" placeholder="Enter keyword" />
+			<input type="submit" value="Submit"><br><br>
+			</form>
+		</div>
+
+		<div>
+
+			{% if result %}
+				<h1>The List of the links for the searched item is as:</h1><br>
+				{% for i in result %}
+					{{ i }}
+					<br>
+				{% endfor %}
+			{% endif %}
+		</div>
+
+		{% endblock %}
